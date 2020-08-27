@@ -9,13 +9,13 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="css/animate.css">
     
   
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
     
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/flaticon.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
   </head>
   <body>
 
@@ -45,7 +45,7 @@
 			
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand logo" href="index.html">Sellerzz</a>
+	      <a class="navbar-brand logo" href="/">Sellerzz</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -58,10 +58,9 @@
 					<input class="form-control mr-sm-2" type="search" placeholder="Enter city, state, zip">
 				</form>
 
-	          {{-- <li class="nav-item active"><a href="index.html" class="nav-link">Tools</a></li>
-	          <li class="nav-item"><a href="#" class="nav-link">Mortgage</a></li> --}}
-	          <li class="nav-item"><a href="/seller" class="nav-link">Sell Your Home</a></li>
-	          <li class="nav-item"><a href="./buyers" class="nav-link">Purchase Your Home</a></li>
+				<li class="nav-item"><a href="/seller" class="nav-link">Sell Your Home</a></li>
+				<li class="nav-item"><a href="./buyers" class="nav-link">Purchase Your Home</a></li>
+	        
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
@@ -71,133 +70,131 @@
 	      </div>
 	    </div>
 	  </nav>
-    <!-- END nav -->
-    
-    <!-- <div class="hero-wrap" style="red;background-image: url('images/perfect-usa-home-PGAKGC7-1-1024x717.jpg');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center">
-          <div class="col-md-6 ftco-animate d-flex align-items-end">
-          	<div class="text w-100">
-	            <h1 class="mb-4 banner-text">Changing real estate.. forever Never Pay 6% Again</h1>
-	           
-	            <p><a href="#" class="btn btn-primary py-3 px-4">Read more</a> </p>
-            </div>
-          </div>
-        
-        </div>
-      </div>
-	</div> -->
-	
-    <header class="cover">
-        <div class="container-fluid h-100 text-white">
-            <div class="row h-100 align-items-center">
-                <div class=" text-md-left text-center ml-md-5 banner-text">
-                    <h1 class="banner-text">Changing Real estate Forever!<br>
-                        Never Pay 6% Again.
-                    </h1>
-                    <p class="lead">
-                        <a class="btn btn-lg btn learnmore" href="#">Learn More..</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </header>
-
+	  <div style=" border-bottom: 2px solid #589167;"></div>
+	 
     
 
-		<section class="ftco-section">
+	<section class="ftco-section">
     	<div class="container">
     		<div class="row justify-content-center pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
-          	
-            <h2>Easy as 1-2-3</h2>
+            <h2>Sell Your Home</h2>
           </div>
         </div>
     		<div class="row">
-				<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-    				<div class="services-2 text-center">
-    					<div class="icon-wrap">
-    						<div class="number d-flex align-items-center justify-content-center"><span>1</span></div>
-	    					<div class="icon d-flex align-items-center justify-content-center">
-	    						<span class="flaticon-checklist"></span>
-	    					</div>
-    					</div>
-    					<h2>List your Home Free</h2>
-  					
-    				</div>
+				<div class="col-md-12">
+    				<form>
+						<div class="form-group row">
+						  <label for="inputEmail3" class="col-sm-2 col-form-label">Home Address</label>
+						  <div class="col-sm-10">
+							<input type="text" class="form-control" id="inputEmail3" placeholder="">
+						  </div>
+						</div>
+						<div class="form-group row">
+						  <label for="inputPassword3" class="col-sm-2 col-form-label">How many Beds</label>
+						  <div class="col-sm-10">
+							<input type="password" class="form-control" id="inputPassword3" placeholder="">
+						  </div>
+						</div>
+						<div class="form-group row">
+							<label for="inputPassword3" class="col-sm-2 col-form-label">How many Baths</label>
+							<div class="col-sm-10">
+							  <input type="password" class="form-control" id="inputPassword3" placeholder="">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inputPassword3" class="col-sm-2 col-form-label">Square Footage</label>
+							<div class="col-sm-10">
+							  <input type="password" class="form-control" id="inputPassword3" placeholder="">
+							</div>
+						  </div>
+						  <div class="form-group row">
+							<label for="inputPassword3" class="col-sm-2 col-form-label">Lot Size</label>
+							<div class="col-sm-10">
+							  <input type="password" class="form-control" id="inputPassword3" placeholder="">
+							</div>
+						  </div>
+					  </form>
+					  <div class="row justify-content-center ">
+							<div class="col-md-7 heading-section text-center ftco-animate">
+								
+							<h3>Select All Feature your Home Has</h3>
+							</div>
+						</div>
+						 <div class="col-md-12">
+							<form>
+								<div class="form-group row">
+								
+								  <div class="col-sm-12">
+									<form>
+										<label class="checkbox-inline mr-3">
+										  <input type="checkbox" value="">Option 1
+										</label>
+										<label class="checkbox-inline mr-3">
+										  <input type="checkbox" value="">Option 2
+										</label>
+										<label class="checkbox-inline mr-3">
+										  <input type="checkbox" value="">Option 3
+										</label>
+										<label class="checkbox-inline mr-3">
+											<input type="checkbox" value="">Option 3
+										  </label>
+										  <label class="checkbox-inline mr-3">
+											<input type="checkbox" value="">Option 3
+										  </label>
+										  <label class="checkbox-inline mr-3">
+											<input type="checkbox" value="">Option 3
+										  </label>
+										  <label class="checkbox-inline mr-3">
+											<input type="checkbox" value="">Option 3
+										  </label><label class="checkbox-inline mr-3">
+											<input type="checkbox" value="">Option 3
+										  </label><label class="checkbox-inline mr-3">
+											<input type="checkbox" value="">Option 3
+										  </label><label class="checkbox-inline mr-3">
+											<input type="checkbox" value="">Option 3
+										  </label><label class="checkbox-inline mr-3">
+											<input type="checkbox" value="">Option 3
+										  </label><label class="checkbox-inline mr-3">
+											<input type="checkbox" value="">Option 3
+										  </label><label class="checkbox-inline mr-3">
+										  <input type="checkbox" value="">Option 3
+										</label>
+									</label><label class="checkbox-inline mr-3">
+										<input type="checkbox" value="">Option 3
+									  </label>
+									</label><label class="checkbox-inline mr-3">
+										<input type="checkbox" value="">Option 3
+									  </label>
+									</label><label class="checkbox-inline mr-3">
+										<input type="checkbox" value="">Option 3
+									  </label>
+									</label><label class="checkbox-inline mr-3">
+										<input type="checkbox" value="">Option 3
+									  </label>
+									
+									  </form>
+								  </div>
+								</div>
+								<div class="form-group row">
+								  <div class="col-sm-10">
+									<button type="submit" class="btn btn-primary pull-right login">Next <i class="fa fa-arrow-right" aria-hidden="true"></i> </span></button>
+									
+								</div>
+								</div>
+							  </form>
+						</div> 
+						 
+						
+
     			</div>
-    			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-    				<div class="services-2 text-center">
-    					<div class="icon-wrap">
-    						<div class="number d-flex align-items-center justify-content-center"><span>02</span></div>
-	    					<div class="icon d-flex align-items-center justify-content-center">
-	    						<span class="flaticon-employee"></span>
-	    					</div>
-    					</div>
-    					<h2>Connect with buyers</h2>
-    					<!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
-    				</div>
-    			</div>
-    			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-    				<div class="services-2 text-center">
-    					<div class="icon-wrap">
-    						<div class="number d-flex align-items-center justify-content-center"><span>0</span></div>
-	    					<div class="icon d-flex align-items-center justify-content-center">
-								<!-- <span class="flaticon-trade"></span> -->
-								<img src="/images/sell1.png">
-	    					</div>
-    					</div>
-    					<h2>Sell your Home</h2>
-  						
-    				</div>
-    			</div>
+    			
+    		
     			
     		</div>
     	</div>
 	</section>
 	
-	
-	<section class="ftco-section bg-light">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          
-            <h2>List Your Home Free</h2>
-          </div>
-        </div>
-    	</div>
-    	<div class="container px-0">
-    		<div class="row ">
-    			<div class="col-md-6">
-					<img src="images/1.jpeg" class="img-fluid list-home">
-    				<div class="services-wrap ">
-    					<div class="text">
-    						<h2>Lorem Ipsum </h2>
-    						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
-    					</div>
-    				</div>
-    			</div>
-    		
-    			<div class="col-md-6">
-					<img src="images/2.jpeg" class="img-fluid list-home">
-    				<div class="services-wrap d-flex">
-    					<div class="text">
-    						<h2>Lorem Ipsum </h2>
-    						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
-    					</div>
-    				</div>
-    			</div>
-
-    			
-    		</div>
-    	</div>
-    </section>
-
-    
-		
-
-    
 
     <footer class="ftco-footer">
       <div class="container">
@@ -209,8 +206,8 @@
     					<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-			              <input type="text" class="form-control" placeholder="First Name">
-			            </div>
+									<input type="text" class="form-control" placeholder="First Name">
+									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
@@ -226,9 +223,9 @@
 								<div class="col-md-12">
 									<div class="form-group">
 			              <input type="submit" value="Sign up" class="btn btn-primary py-3 px-4">
-			            </div>
+			            	</div>
 								</div>
-    					</div>
+    						</div>
 	          		</form>
 			
 			  </div>
@@ -279,20 +276,20 @@
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="assets/js/popper.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.easing.1.3.js"></script>
-  <script src="assets/js/jquery.waypoints.min.js"></script>
-  <script src="assets/js/jquery.stellar.min.js"></script>
-  <script src="assets/js/owl.carousel.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/jquery.animateNumber.min.js"></script>
-  <script src="assets/js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="assets/js/google-map.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../assets/js/popper.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.easing.1.3.js"></script>
+  <script src="../assets/js/jquery.waypoints.min.js"></script>
+  <script src="../assets/js/jquery.stellar.min.js"></script>
+  <script src="../assets/js/owl.carousel.min.js"></script>
+  <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="../assets/js/jquery.animateNumber.min.js"></script>
+  <script src="../assets/js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/../assets/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../assets/js/google-map.js"></script>
+  <script src="../assets/js/main.js"></script>
     
   </body>
 </html>
