@@ -1,0 +1,1 @@
+@extends('layouts.buyer_layouts.main_layout')

@@ -13,6 +13,6 @@ class BuyerController extends Controller
 
     public function register()
     {
-        return view('buyer_register');
+        return view('buyer_views.register');
     }
 }
