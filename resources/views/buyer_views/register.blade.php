@@ -9,10 +9,15 @@
 <!-- Content -->
 <section>
     <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h2>Buyer Registration</h2>
+            </div>
+        </div>
         <div class="card-body">
             <form method="POST" action="{{ route('register') }}">
                 @csrf
-
+                <input type="text" value="buyer" name="user_type" hidden>
                 <div class="form-group row">
                     <label for="firstname" class="col-md-4 col-form-label text-md-right">{{ __('Firstname') }}</label>
 
