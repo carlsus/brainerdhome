@@ -1,4 +1,4 @@
-@extends('layouts.buyer_layouts.main_layout')
+@extends('layouts.app')
 {{-- Custom CSS --}}
 @section('custom_css')
     {{-- PLACE CUSTOM CSS HERE  --}}
