@@ -20,5 +20,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/buyer', 'Buyer\BuyerSearchController@index')->name('buyer_search');
 Route::get('/buyer/register', 'Buyer\BuyerRegistrationController@show')->name('buyer_register');
+Route::post('/buyer/register', 'Buyer\BuyerRegistrationController@create')->name('buyer_register');
 
 Route::get('/seller', 'SellerController@index')->name('seller_index');
