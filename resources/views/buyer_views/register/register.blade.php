@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{ route('buyer_register') }}">
+            <form method="POST" action="{{ route('buyer.register') }}">
                 @csrf
                 <input type="text" value="buyer" name="user_type" hidden>
                 <div class="form-group row">

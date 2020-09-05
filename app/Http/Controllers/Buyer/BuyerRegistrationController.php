@@ -7,11 +7,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Buyer\BuyerRegistrationRequest;
 use Illuminate\Support\Facades\Hash;
 use App\User;
+use Auth;
 
 class BuyerRegistrationController extends Controller
 {
-
-    protected $redirectTo = '/home';
     
     public function show()
     {
@@ -25,9 +24,8 @@ class BuyerRegistrationController extends Controller
             'user_type' => 'buyer'
         ]);
 
-        //dd($request->all());
         // Register the buyer.
-        return User::create([
+        $user = User::create([
             'firstname' => $request['firstname'],
             'lastname' => $request['lastname'],
             'mobilephone' => $request['mobilephone'],
@@ -36,5 +34,10 @@ class BuyerRegistrationController extends Controller
             'password' => Hash::make($request['password']),
             'user_type' => $request['user_type'], // user type buyer or seller.
         ]);
+        
+        Auth::login($user);
+
+        return redirect()->route('buyer.dashboard');
+
     } // create()
 }
