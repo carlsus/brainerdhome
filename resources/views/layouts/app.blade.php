@@ -31,7 +31,7 @@
 	          {{-- <li class="nav-item active"><a href="index.html" class="nav-link">Tools</a></li>
 	          <li class="nav-item"><a href="#" class="nav-link">Mortgage</a></li> --}}
 	          <li class="nav-item"><a href="{{ url('seller') }}" class="nav-link">Sell Your Home</a></li>
-	          <li class="nav-item"><a href="{{ url('buyer') }}" class="nav-link">Purchase Your Home</a></li>
+	          <li class="nav-item"><a href="{{ route('buyer.search.index') }}" class="nav-link">Purchase Your Home</a></li>
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
