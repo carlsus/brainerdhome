@@ -11,7 +11,7 @@ class BuyerRegistrationController extends Controller
 {
     public function show()
     {
-        return view('buyer_views.register');
+        return view('buyer_views.register.register');
     } // show()
 
     public function create(BuyerRegistrationRequest $request)
