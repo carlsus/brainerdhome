@@ -49,7 +49,7 @@
             <div class="card-footer">
                 <div class="col-12 pl-0 pr-0">
                     <div class="col-lg-4 col-sm-12 pl-1 pr-1 d-flex pull-right">
-                        <button class="btn btn-info btn-block">More Info</button>
+                        <button class="btn btn-primary btn-block">More Info</button>
                     </div>
                 </div>
             </div>
