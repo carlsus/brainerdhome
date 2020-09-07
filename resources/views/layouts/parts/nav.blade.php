@@ -13,10 +13,19 @@
                 <input class="form-control mr-sm-2" type="search" placeholder="Enter city, state, zip">
             </form>
 
-            {{-- <li class="nav-item active"><a href="index.html" class="nav-link">Tools</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Mortgage</a></li> --}}
             <li class="nav-item"><a href="{{ url('seller') }}" class="nav-link">Sell Your Home</a></li>
-            <li class="nav-item"><a href="{{ route('buyer.search.index') }}" class="nav-link">Purchase Your Home</a></li>
+            @guest
+                <li class="nav-item"><a href="{{ route('buyer.search.index') }}" class="nav-link">Purchase Your Home</a></li>
+            @endguest
+            @auth
+                @if (Auth::user()->user_type === 'buyer')
+                    <li class="nav-item"><a href="#" class="nav-link">Notifications Buyer</a></li>
+                @endif
+                @if (Auth::user()->user_type === 'seller')
+                    <li class="nav-item"><a href="#" class="nav-link">Notifications Seller</a></li>
+                @endif
+            @endauth
+            
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
