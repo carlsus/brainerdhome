@@ -18,7 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/buyer', 'BuyerController@index')->name('buyer_search');
-Route::get('/buyer/register', 'BuyerController@register')->name('buyer_register');
+// Buyer Routes
+Route::get('/buyer', 'Buyer\BuyerSearchController@index')->name('buyer.search.index');
+Route::get('/buyer/register', 'Buyer\BuyerRegistrationController@show')->name('buyer.register');
+Route::post('/buyer/register', 'Buyer\BuyerRegistrationController@create')->name('buyer.register');
+Route::get('/buyer/dashboard', 'Buyer\BuyerDashboardController@index')->middleware('auth')->name('buyer.dashboard');
 
 Route::get('/seller', 'SellerController@index')->name('seller_index');
