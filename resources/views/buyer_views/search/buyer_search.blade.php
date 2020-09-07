@@ -48,7 +48,7 @@
                 </form>
                 <hr>
                 <div class="text-center">
-                    <a href="{{ url('buyer/register') }}">Register</a> to avail of our exclusive deals.
+                    <a href="{{ route('buyer.register') }}">Register</a> to avail of our exclusive deals.
                 </div>
             </div>    
         </div>

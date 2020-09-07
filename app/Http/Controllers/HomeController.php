@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // If logged in user type is buyer, redirect to buyer dashboard.
+        if(Auth::user()->user_type === 'buyer')
+        {
+            return redirect()->route('buyer.dashboard');
+        }
         return view('home');
     }
 }

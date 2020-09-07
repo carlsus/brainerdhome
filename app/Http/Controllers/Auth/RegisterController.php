@@ -73,6 +73,7 @@ class RegisterController extends Controller
             'officephone' => $data['officephone'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'user_type' => $data['user_type'], // user type buyer or seller.
         ]);
     }
 }
