@@ -15,7 +15,7 @@ class APITestController extends Controller
         $client = new Client;
         $request = $client->request('GET','http://slipstream-test.homejunction.com/ws/areas/states/get',[
             'headers' => [
-                'HJI-Slipstream-Token' => 'HJI-0CFFB569-8FC2-4EC6-8B9C-6298C70301AD',
+                'HJI-Slipstream-Token' => 'HJI-3CFC250E-BFE5-46F4-A750-F77180DAA981',
             ],
             'query' => [
                 'id' => $id,
@@ -25,11 +25,39 @@ class APITestController extends Controller
         
         // Fetch specific data.
         $state = json_decode($request->getBody()->getContents(), true);
-        return $state['result']['states'][0]['id'];
+        //dd($state);
+        $lat = $state['result']['states'][0]['id'];
+        return $lat;
     }
 
-    public function getListings()
+    public function call()
     {
+        $id = 'AZ'; // ID or abbreviation of the state.
+        $client = new Client;
+        $request = $client->request('GET','http://slipstream-test.homejunction.com/ws/areas/states/get',[
+            'headers' => [
+                'HJI-Slipstream-Token' => 'HJI-3CFC250E-BFE5-46F4-A750-F77180DAA981',
+            ],
+            'query' => [
+                'id' => $id,
+                'details' => true,
+            ]
+        ]);
+        
+        $state = json_decode($request->getBody()->getContents(), true);
+        // Get the coords
+        $coords = $state['result']['states'][0]['centroid']['latitude'] . ',' . $state['result']['states'][0]['centroid']['longitude'];
 
+        // Get Markets
+        $request = $client->request('GET','http://slipstream-test.homejunction.com/ws/markets/search',[
+            'headers' => [
+                'HJI-Slipstream-Token' => 'HJI-3CFC250E-BFE5-46F4-A750-F77180DAA981',
+            ],
+            'query' => [
+                'coords' => $coords,
+            ]
+        ]);
+        $markets = json_decode($request->getBody()->getContents(), true)['result']['markets'];
+        return view('apitest', compact('markets'));
     }
 }
