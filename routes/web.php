@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 // TEST Controller
-Route::get('/test', 'Api\APITestController@call')->name('api.test');
+Route::get('/test', 'Api\APITestController@getMarkets')->name('api.test');
 
 Auth::routes();
 

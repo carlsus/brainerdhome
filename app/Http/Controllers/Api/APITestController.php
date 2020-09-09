@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use GuzzleHttp\Client;
+use App\Models\Seller\Market;
+
 
 class APITestController extends Controller
 {
@@ -28,6 +30,12 @@ class APITestController extends Controller
         //dd($state);
         $lat = $state['result']['states'][0]['id'];
         return $lat;
+    }
+
+    public function getMarkets()
+    {
+        $markets = Market::getMarkets('AZ');
+        return view('apitest', compact('markets'));
     }
 
     public function call()

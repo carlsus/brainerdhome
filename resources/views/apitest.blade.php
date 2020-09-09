@@ -14,8 +14,8 @@
             <tbody>
                 @foreach ($markets as $market)
                     <tr>
-                        <td>{{ $market['id'] }}</td>
-                        <td>{{ $market['name'] }}</td>
+                        <td>{{ $market->id }}</td>
+                        <td>{{ $market->name }}</td>
                     </tr>
                 @endforeach
             </tbody>
