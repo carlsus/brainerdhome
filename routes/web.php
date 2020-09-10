@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// TEST Controller
+Route::get('/test', 'Api\APITestController@getMarkets')->name('api.test');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
