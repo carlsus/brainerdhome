@@ -13,6 +13,6 @@ class PropertyType extends Model
     // Method to link the property type to its Property.
     public function property()
     {
-        return $this->belongsTo(Property::class);
+        return $this->belongsTo(Property::class, 'propertytype_id', 'id');
     }
 }

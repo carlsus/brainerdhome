@@ -14,6 +14,13 @@ use Auth;
 
 class PropertiesController extends Controller
 {
+    public function index()
+    {
+        // Get the properties the user posted.
+        $propertyListings = Auth::user()->property;
+        return view('property.index', compact('propertyListings'));
+    }
+
     public function create()
     {
         $propertyTypes = PropertyType::all();

@@ -21,8 +21,8 @@ class Property extends Model
     }
 
     // Method to link the property listing to its type.
-    public function propertyType()
+    public function property_type()
     {
-        return $this->hasOne(PropertyType::class);
+        return $this->hasOne(PropertyType::class, 'id', 'propertytype_id');
     }
 }
