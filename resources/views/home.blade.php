@@ -83,7 +83,7 @@
                                 <a class="nav-link" href="#">Mortgage</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Sell Your Home</a>
+                                <a class="nav-link" href="{{ route('properties.create') }}">Sell Your Home</a>
                             </li>
                             
                         </ul>
