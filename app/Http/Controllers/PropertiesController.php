@@ -22,6 +22,9 @@ class PropertiesController extends Controller
 
     public function store(ListPropertyRequest $request)
     {
-        dd($request->all());
+        // Save the listing to the database.
+        $request->user()->property()->create(
+            $request->all()
+        );
     }
 }

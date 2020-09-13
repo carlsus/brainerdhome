@@ -40,7 +40,7 @@ class User extends Authenticatable
     ];
 
     // Method for getting the user that saved the property listing.
-    public function propertyListings()
+    public function property()
     {
         return $this->hasMany(Property::class);
     }

@@ -40,7 +40,7 @@ class ListPropertyRequest extends FormRequest
     protected function prepareForValidation()
     {
         $this->merge([
-            'listdate' => time(),
+            'listdate' => date("Y-m-d",time()),
         ]);
     }
 

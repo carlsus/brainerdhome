@@ -11,6 +11,9 @@ class Property extends Model
     // Use the property table, unless we renamed it to plural properties.
     protected $table = 'property';
 
+    // Allow mass assignment.
+    protected $guarded = [];
+
     // Method to link the property listing to the seller.
     public function seller()
     {
