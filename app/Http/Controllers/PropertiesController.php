@@ -22,6 +22,6 @@ class PropertiesController extends Controller
 
     public function store(ListPropertyRequest $request)
     {
-
+        dd($request->all());
     }
 }
