@@ -27,4 +27,7 @@ Route::get('/buyer/register', 'Buyer\BuyerRegistrationController@show')->name('b
 Route::post('/buyer/register', 'Buyer\BuyerRegistrationController@create')->name('buyer.register');
 Route::get('/buyer/dashboard', 'Buyer\BuyerDashboardController@index')->middleware('auth')->name('buyer.dashboard');
 
+// Property
+Route::get('/property/create', 'PropertiesController@create')->name('properties.create');
+
 Route::get('/seller', 'SellerController@index')->name('seller_index');
