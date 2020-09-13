@@ -9846,7 +9846,7 @@ textarea.form-control {
   .cover {
     display:table;
     height: 100vh;
-    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/images/perfect-usa-home-PGAKGC7-1-1024x717.jpg');
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('public/images/perfect-usa-home-PGAKGC7-1-1024x717.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
