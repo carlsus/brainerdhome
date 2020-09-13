@@ -27,6 +27,45 @@ class ListPropertyRequest extends FormRequest
             'propertytype_id' => 'required',
             'hlurbno' => 'required',
             'listingno' => 'required',
+            'address' => 'required',
+            'lotarea' => 'required|numeric',
+            'floorarea' => 'required|numeric',
+            'bedrooms' => 'required|integer',
+            'bathrooms' => 'required|integer',
+            'garage' => 'required',
         ];
     }
+
+    // Method for setting default values after validation.
+    protected function prepareForValidation()
+    {
+        $this->merge([
+            'listdate' => time(),
+        ]);
+    }
+
+    // Method for setting field validation names.
+    public function attributes()
+    {
+        return [
+            'propertytype_id' => 'Property Type',
+            'hlurbno' => 'HLURB Number',
+            'listingno' => 'Listing Number',
+            'address' => 'Address',
+            'lotarea' => 'Lot Area',
+            'floorarea' => 'Floor Area',
+            'bedrooms' => 'Bedrooms',
+            'bathrooms' => 'Bathrooms',
+            'garage' => 'Garage',
+        ];
+    }
+
+    // Method for custom messages based on validation.
+    // public function messages()
+    // {
+    //     return [
+    //         'title.required' => 'A title is required',
+    //         'body.required' => 'A message is required',
+    //     ];
+    // }
 }
