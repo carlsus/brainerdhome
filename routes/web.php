@@ -29,5 +29,6 @@ Route::get('/buyer/dashboard', 'Buyer\BuyerDashboardController@index')->middlewa
 
 // Property
 Route::get('/property/create', 'PropertiesController@create')->name('properties.create');
+Route::post('/property', 'PropertiesController@store')->name('properties.store');
 
 Route::get('/seller', 'SellerController@index')->name('seller_index');

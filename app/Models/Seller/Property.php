@@ -16,6 +16,7 @@ class Property extends Model
     {
         return $this->belongsTo(User::class);
     }
+
     // Method to link the property listing to its type.
     public function propertyType()
     {

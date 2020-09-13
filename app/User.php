@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Models\Seller\Property;
 
 class User extends Authenticatable
 {
@@ -37,4 +38,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // Method for getting the user that saved the property listing.
+    public function propertyListings()
+    {
+        return $this->hasMany(Property::class);
+    }
 }

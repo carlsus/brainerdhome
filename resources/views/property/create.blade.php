@@ -27,11 +27,11 @@
             <div class="container">
                 <div class="col-12">
                     <h1>Propery Registration</h1>
-                    <form action="" method="POST">
+                    <form action="{{ route('properties.store') }}" method="POST">
                         @csrf
                         <div class="form-group">
                             <select class="form-control" name="propertytype_id">
-                                <option value="" selected disabled>Select Property Type</option>
+                                <option selected disabled>Select Property Type</option>
                                 @foreach($propertyTypes as $propertyType)
                                     <option value="{{ $propertyType->id }}">{{ $propertyType->propertytype_name }}</option>
                                 @endforeach
@@ -42,6 +42,9 @@
                         </div>
                         <div class="form-group">
                             <input class="form-control" type="text" name="listingno" placeholder="Listing Number">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary" type="submit">Post Listing</button>
                         </div>
                     </form>
                 </div>
