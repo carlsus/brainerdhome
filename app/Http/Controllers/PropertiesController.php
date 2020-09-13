@@ -26,5 +26,8 @@ class PropertiesController extends Controller
         $request->user()->property()->create(
             $request->all()
         );
+        
+        // Prompt the user after saving.
+        return redirect()->route('properties.create')->with('success', 'Property has been listed.');
     }
 }

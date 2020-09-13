@@ -14,7 +14,7 @@
     <div class="wrapper">
         {{-- Sidebar --}}
         @include('layouts.sell_home_layouts.sidebar')
-        
+
         <!-- Page Content Holder -->
         <div id="content">
             {{-- Navbar --}}
@@ -23,6 +23,8 @@
             {{-- Page Heading Text --}}
             @yield('content-title')
             
+            @yield('alerts')
+
             {{-- Page Content --}}
             <div class="row">
                 @yield('content')

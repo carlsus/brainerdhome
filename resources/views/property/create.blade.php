@@ -8,6 +8,12 @@
 <h2 class="text-center pb-5 heading-section" ><span style="border-bottom: 2px solid #589167;">Sell your Home</span></h2>
 @endsection
 
+@section('alerts')
+    @if(session('success'))
+        @include('layouts.sell_home_layouts._alerts')
+    @endif
+@endsection
+
 @section('content')
 <div class="container">
     <form action="{{ route('properties.store') }}" method="POST">
