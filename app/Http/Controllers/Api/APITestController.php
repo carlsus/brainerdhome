@@ -17,7 +17,7 @@ class APITestController extends Controller
         $client = new Client;
         $request = $client->request('GET','http://slipstream-test.homejunction.com/ws/areas/states/get',[
             'headers' => [
-                'HJI-Slipstream-Token' => 'HJI-3CFC250E-BFE5-46F4-A750-F77180DAA981',
+                'HJI-Slipstream-Token' => 'HJI-E3C18D4E-01E0-4628-A740-E83A977A9847',
             ],
             'query' => [
                 'id' => $id,
@@ -44,7 +44,7 @@ class APITestController extends Controller
         $client = new Client;
         $request = $client->request('GET','http://slipstream-test.homejunction.com/ws/areas/states/get',[
             'headers' => [
-                'HJI-Slipstream-Token' => 'HJI-3CFC250E-BFE5-46F4-A750-F77180DAA981',
+                'HJI-Slipstream-Token' => 'HJI-E3C18D4E-01E0-4628-A740-E83A977A9847',
             ],
             'query' => [
                 'id' => $id,

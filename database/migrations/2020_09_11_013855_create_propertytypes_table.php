@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddUserTypeToUsersTable extends Migration
+class CreatePropertytypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddUserTypeToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->enum('user_type', ['buyer', 'seller']);
+        Schema::create('propertytypes', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('propertytype_name');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class AddUserTypeToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('user_type');
-        });
+        Schema::dropIfExists('propertytypes');
     }
 }
