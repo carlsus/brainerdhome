@@ -13,7 +13,7 @@ class ListPropertyRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,9 @@ class ListPropertyRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'propertytype_id' => 'required',
+            'hlurbno' => 'required',
+            'listingno' => 'required',
         ];
     }
 }
