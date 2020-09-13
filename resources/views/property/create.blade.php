@@ -24,10 +24,28 @@
     <div class="wrapper">
         <!-- Page Content Holder -->
         <div id="content">
-            <h1>Propery Registration</h1>
-            <form action="" method="POST">
-                
-            </form>
+            <div class="container">
+                <div class="col-12">
+                    <h1>Propery Registration</h1>
+                    <form action="" method="POST">
+                        @csrf
+                        <div class="form-group">
+                            <select class="form-control" name="propertytype_id">
+                                <option value="" selected disabled>Select Property Type</option>
+                                @foreach($propertyTypes as $propertyType)
+                                    <option value="{{ $propertyType->id }}">{{ $propertyType->propertytype_name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="hlurbno" placeholder="HLURB">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="listingno" placeholder="Listing Number">
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
