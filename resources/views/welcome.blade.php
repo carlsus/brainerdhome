@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.landing_page_layouts.app')
 @section('content')
 <header class="cover">
 	<div class="container-fluid h-100 text-white">
@@ -67,5 +67,4 @@
 		</div>
 	</div>
 </section>
-
 @endsection
