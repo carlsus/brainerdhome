@@ -7,18 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>@yield('page_title')</title>
-    @include('layouts.sell_home_layouts.common_css')
+    @include('layouts.application_layouts.common_css')
 </head>
 
 <body>
     <div class="wrapper">
         {{-- Sidebar --}}
-        @include('layouts.sell_home_layouts.sidebar')
+        @include('layouts.application_layouts.sidebar')
 
         <!-- Page Content Holder -->
         <div id="content">
             {{-- Navbar --}}
-            @include('layouts.sell_home_layouts.navbar')
+            @include('layouts.application_layouts.navbar')
             
             {{-- Page Heading Text --}}
             @yield('content-title')
@@ -31,7 +31,7 @@
             </div>
         </div>
     </div>
-    @include('layouts.sell_home_layouts.common_js')
+    @include('layouts.application_layouts.common_js')
 </body>
 
 </html> 

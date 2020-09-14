@@ -1,4 +1,4 @@
-@extends('layouts.sell_home_layouts.app')
+@extends('layouts.application_layouts.app')
 
 @section('page_title')
     Sell your Home
