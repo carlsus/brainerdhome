@@ -10,7 +10,7 @@
 
 @section('alerts')
     @if(session('success'))
-        @include('layouts.sell_home_layouts._alerts')
+        @include('layouts.application_layouts._alerts')
     @endif
 @endsection
 

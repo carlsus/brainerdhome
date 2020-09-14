@@ -1,7 +1,7 @@
 <!-- Sidebar Holder -->
 <nav id="sidebar">
     <div class="sidebar-header">
-        <h3>Sellerzz</h3>
+        <h3>Sellerzz {{ Auth::user()->user_type === 'buyer' ? '(Buyer)' : ''}}</h3>
     </div>
     <hr>
     <ul class="list-unstyled components" >

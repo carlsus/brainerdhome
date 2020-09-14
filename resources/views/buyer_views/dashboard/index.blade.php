@@ -1,66 +1,47 @@
-@extends('layouts.app')
-{{-- Custom CSS --}}
-@section('custom_css')
-    {{-- PLACE CUSTOM CSS HERE  --}}
+@extends('layouts.application_layouts.app')
+
+@section('page_title')
+    New Listings
 @endsection
-{{-- /Custom CSS --}}
+
+@section('content-title')
+    <h2 class="text-center pb-5 heading-section" ><span style="border-bottom: 2px solid #589167;">New Listings</span></h2>
+@endsection
+
+@section('alerts')
+    @if(session('success'))
+        @include('layouts.application_layouts._alerts')
+    @endif
+@endsection
 
 @section('content')
-<!-- Content -->
-<section>
-    <div class="container">
-        <h1>Buyer Dashboard</h1>
-        <div class="card mb-3" style="">
-            <div class="row">
-                <div class="col-md-5">
-                    <img src="https://static-ph.lamudi.com/static/media/bm9uZS9ub25l/2x2x5x880x450/f380204ec3f83d.jpg" class="card-img" alt="...">
-                </div>
-                <div class="col-md-7">
-                    <div class="card-body">
-                        <h5 class="card-title"><strong><a href="#">Card title</a></strong></h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+<div class="container">
+    @foreach ($propertyListings as $property)
+        <div class="col-12">
+            <div class="card-body">
+                <svg class="bd-placeholder-img" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" role="img"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>
+                <h5 class="card-title">{{ $property->property_type->propertytype_name }}</h5><span> by: <a href="#">{{ $property->seller->full_name }}</a></span>
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, doloribus enim? Sequi, ex dolorum blanditiis magni porro commodi fuga asperiores voluptatem nemo tenetur! Vitae, ipsam suscipit! Possimus eligendi minima sit.</p>      
+                <div class="row">
+                    <div class="col-sm-12 col-lg-3">
+                        <h3><strong><i class='fas fa-bed'></i> {{ $property->bedrooms }}</strong></h3>
+                        <small>Bedrooms</small>
                     </div>
-                    <div class="col-12 mb-3">
-                        <div class="row">
-                            <div class="col-sm-12 col-lg-4">
-                                <h3><strong>$ 1,000,000</strong></h3>
-                            </div>
-                            <div class="col-sm-12 col-lg-8">
-                                <div class="row">
-                                    <div class="col-sm-12 col-lg-3">
-                                        <h3><strong><i class='fas fa-bed'></i> 8</strong></h3>
-                                        <small>Bedrooms</small>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-3">
-                                        <h3><strong><i class='fas fa-bath'></i> 2</strong></h3>
-                                        <small>Baths</small>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-6">
-                                        <h3><strong><i class='far fa-building'></i> 300</strong></h3>
-                                        <small>Floor Area (sq.m.)</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-sm-12 col-lg-3">
+                        <h3><strong><i class='fas fa-bath'></i> {{ $property->bathrooms }}</strong></h3>
+                        <small>Baths</small>
                     </div>
-                </div>
-            </div>
-            <div class="card-footer">
-                <div class="col-12 pl-0 pr-0">
-                    <div class="col-lg-4 col-sm-12 pl-1 pr-1 d-flex pull-right">
-                        <button class="btn btn-primary btn-block">More Info</button>
+                    <div class="col-sm-12 col-lg-3">
+                        <h3><strong><i class='fas fa-building'></i> {{ $property->floorarea }}</strong></h3>
+                        <small>Floor Area (sq.m.)</small>
+                    </div>
+                    <div class="col-sm-12 col-lg-3">
+                        <h3><strong><i class='fas fa-building'></i> {{ $property->lotarea }}</strong></h3>
+                        <small>Floor Area (sq.m.)</small>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- /Content -->
+    @endforeach
+</div>
 @endsection
-
-{{-- Custom Scripts --}}
-@section('custom_scripts')
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
-@endsection
-{{-- /Custom Scripts --}}
