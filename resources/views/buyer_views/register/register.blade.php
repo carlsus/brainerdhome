@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.landing_page_layouts.app')
 {{-- Custom CSS --}}
 @section('custom_css')
     {{-- PLACE CUSTOM CSS HERE  --}}
@@ -127,6 +127,6 @@
 
 {{-- Custom Scripts --}}
 @section('custom_scripts')
-    @include('layouts.buyer_layouts.scripts.state_and_town_script')
+    
 @endsection
 {{-- /Custom Scripts --}}
