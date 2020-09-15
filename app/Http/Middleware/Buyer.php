@@ -17,7 +17,7 @@ class Buyer
     {
         if(Auth::user()->user_type != 'buyer')
         {
-            return redirect('home');
+            return abort(403);
         }
 
         return $next($request);
