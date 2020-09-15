@@ -19,14 +19,26 @@
     <form action="{{ route('properties.store') }}" method="POST">
         @csrf
         <div class="form-group">
-            <select class="form-control {{ $errors->has('propertytype_id') ? 'is-invalid' : ''}}" name="propertytype_id">
+            <select class="form-control {{ $errors->has('type_id') ? 'is-invalid' : ''}}" name="type_id">
                 <option selected disabled>Select Property Type</option>
                 @foreach($propertyTypes as $propertyType)
-                    <option value="{{ $propertyType->id }}" {{ old('propertytype_id') == $propertyType->id ? 'selected' : ''}}>{{ $propertyType->propertytype_name }}</option>
+                    <option value="{{ $propertyType->id }}" {{ old('type_id') == $propertyType->id ? 'selected' : ''}}>{{ $propertyType->type_name }}</option>
                 @endforeach
             </select>
-            @error('propertytype_id')
-                <div class="d-block invalid-feedback">{{ $errors->first('propertytype_id') }}</div>
+            @error('type_id')
+                <div class="d-block invalid-feedback">{{ $errors->first('type_id') }}</div>
+            @enderror
+        </div>
+        <div class="form-group">
+            <input class="form-control {{ $errors->has('title') ? 'is-invalid' : ''}}" type="text" value="{{ old('title') }}" name="title" placeholder="Posting Title">
+            @error('title')
+                <div class="d-block invalid-feedback">{{ $errors->first('title') }}</div>
+            @enderror
+        </div>
+        <div class="form-group">
+            <input class="form-control {{ $errors->has('price') ? 'is-invalid' : ''}}" type="text" value="{{ old('price') }}" name="price" placeholder="Price">
+            @error('price')
+                <div class="d-block invalid-feedback">{{ $errors->first('price') }}</div>
             @enderror
         </div>
         <div class="form-group">

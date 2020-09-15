@@ -24,7 +24,9 @@ class ListPropertyRequest extends FormRequest
     public function rules()
     {
         return [
-            'propertytype_id' => 'required',
+            'type_id' => 'required',
+            'title' => 'required',
+            'price' => 'required|regex:/^\d+(\.\d{1,2})?$/',
             'hlurbno' => 'required',
             'listingno' => 'required',
             'address' => 'required',
@@ -48,7 +50,9 @@ class ListPropertyRequest extends FormRequest
     public function attributes()
     {
         return [
-            'propertytype_id' => 'Property Type',
+            'type_id' => 'Property Type',
+            'title' => 'Posting Title',
+            'price' => 'Property Amount',
             'hlurbno' => 'HLURB Number',
             'listingno' => 'Listing Number',
             'address' => 'Address',
