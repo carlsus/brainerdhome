@@ -18,6 +18,7 @@ class PropertiesController extends Controller
     {
         // Get the properties the user posted.
         $propertyListings = Auth::user()->property;
+        //dd($propertyListings);
         return view('property.index', compact('propertyListings'));
     }
 

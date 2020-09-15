@@ -20,7 +20,10 @@
         <div class="col-12">
             <div class="card-body">
                 <svg class="bd-placeholder-img" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" role="img"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>
-                <h5 class="card-title">{{ $property->property_type->propertytype_name }}</h5>
+                <h5 class="card-title">{{ $property->title }}</h5>
+                <p class="text-muted">{{ $property->type->type_name }}</p>
+                <p class="text-muted">{{ $property->seller->full_name }}</p>
+                {{-- <p class="text-muted">{{ $property->seller->full_name }}</p> --}}
                 <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, doloribus enim? Sequi, ex dolorum blanditiis magni porro commodi fuga asperiores voluptatem nemo tenetur! Vitae, ipsam suscipit! Possimus eligendi minima sit.</p>      
                 <div class="row">
                     <div class="col-sm-12 col-lg-3">

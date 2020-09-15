@@ -42,7 +42,7 @@ class User extends Authenticatable
     // Method for getting the user that saved the property listing.
     public function property()
     {
-        return $this->hasMany(Property::class);
+        return $this->hasMany(Property::class, 'user_id', 'id');
     }
 
     public function getFullNameAttribute()
