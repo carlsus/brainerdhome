@@ -31,7 +31,7 @@ class CreatePropertiesTable extends Migration
             $table->timestamps();
             // Foreign Keys
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('type_id')->references('id')->on('propetry_types');
+            $table->foreign('type_id')->references('id')->on('property_types');
         });
     }
 

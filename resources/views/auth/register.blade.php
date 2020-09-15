@@ -8,6 +8,23 @@
                 @csrf
 
                 <div class="form-group row">
+                    <label for="user_type" class="col-md-4 col-form-label text-md-right">User Type</label>
+
+                    <div class="col-md-6">
+                        <select class="form-control" name="user_type" id="user_type">
+                            <option value="seller">Seller</option>
+                            <option value="buyer">Buyer</option>
+                        </select>
+
+                        @error('user_type')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="form-group row">
                     <label for="firstname" class="col-md-4 col-form-label text-md-right">{{ __('Firstname') }}</label>
 
                     <div class="col-md-6">

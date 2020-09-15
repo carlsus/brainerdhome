@@ -9,7 +9,7 @@ use App\Models\Seller\PropertyType;
 class Property extends Model
 {
     // Use the property table, unless we renamed it to plural properties.
-    protected $table = 'property';
+    protected $table = 'properties';
 
     // Allow mass assignment.
     protected $guarded = [];
@@ -17,12 +17,12 @@ class Property extends Model
     // Method to link the property listing to the seller.
     public function seller()
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(User::class);
     }
 
     // Method to link the property listing to its type.
     public function property_type()
     {
-        return $this->hasOne(PropertyType::class, 'id', 'propertytype_id');
+        return $this->hasOne(PropertyType::class);
     }
 }

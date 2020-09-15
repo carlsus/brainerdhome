@@ -8,11 +8,11 @@ use App\Models\Seller\Property;
 class PropertyType extends Model
 {
     // Use the propertytypes table.
-    protected $table = 'propertytypes';
+    protected $table = 'property_types';
 
     // Method to link the property type to its Property.
     public function property()
     {
-        return $this->belongsTo(Property::class, 'propertytype_id', 'id');
+        return $this->belongsTo(Property::class);
     }
 }
