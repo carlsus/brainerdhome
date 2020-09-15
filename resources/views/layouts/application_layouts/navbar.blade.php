@@ -19,9 +19,12 @@
                     <a class="nav-link" href="#">Mortgage</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('properties.create') }}">Sell Your Home</a>
+                    @if(Auth::user()->user_type === 'seller')
+                        <a class="nav-link" href="{{ route('properties.create') }}">Sell Your Home</a>
+                    @else {{-- Buyer Menu --}}
+                        <a class="nav-link" href="#">Search</a>
+                    @endif
                 </li>
-                
             </ul>
         </div>
     </div>
