@@ -447,6 +447,7 @@ class ComposerStaticInit6a6ac5d6bccedcbd2f3ccea3712ce8a0
     );
 
     public static $classMap = array (
+        'App\\Comment' => __DIR__ . '/../..' . '/app/Comment.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Api\\APITestController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/APITestController.php',
@@ -455,6 +456,7 @@ class ComposerStaticInit6a6ac5d6bccedcbd2f3ccea3712ce8a0
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+        'App\\Http\\Controllers\\Buyer\\BuyerCommentsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Buyer/BuyerCommentsController.php',
         'App\\Http\\Controllers\\Buyer\\BuyerController' => __DIR__ . '/../..' . '/app/Http/Controllers/Buyer/BuyerController.php',
         'App\\Http\\Controllers\\Buyer\\BuyerDashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Buyer/BuyerDashboardController.php',
         'App\\Http\\Controllers\\Buyer\\BuyerRegistrationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Buyer/BuyerRegistrationController.php',

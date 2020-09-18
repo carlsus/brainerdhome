@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Comment' => $baseDir . '/app/Comment.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Api\\APITestController' => $baseDir . '/app/Http/Controllers/Api/APITestController.php',
@@ -14,6 +15,7 @@ return array(
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Auth\\VerificationController' => $baseDir . '/app/Http/Controllers/Auth/VerificationController.php',
+    'App\\Http\\Controllers\\Buyer\\BuyerCommentsController' => $baseDir . '/app/Http/Controllers/Buyer/BuyerCommentsController.php',
     'App\\Http\\Controllers\\Buyer\\BuyerController' => $baseDir . '/app/Http/Controllers/Buyer/BuyerController.php',
     'App\\Http\\Controllers\\Buyer\\BuyerDashboardController' => $baseDir . '/app/Http/Controllers/Buyer/BuyerDashboardController.php',
     'App\\Http\\Controllers\\Buyer\\BuyerRegistrationController' => $baseDir . '/app/Http/Controllers/Buyer/BuyerRegistrationController.php',
