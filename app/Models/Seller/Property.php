@@ -17,13 +17,13 @@ class Property extends Model
     // Method to link the property listing to the seller.
     public function seller()
     {
-        return $this->belongsTo(User::class, 'user_id', 'id');
+        return $this->hasOne(User::class);
     }
 
     // Method to link the property listing to its type.
     public function type()
     {
-        return $this->hasOne(PropertyType::class, 'id', 'type_id');
+        return $this->belongsTo(PropertyType::class);
     }
 
     public function getFormattedPriceAttribute()
