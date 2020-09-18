@@ -42,7 +42,7 @@
                         <small>Floor Area (sq.m.)</small>
                     </div>
                 </div>
-                <a class="btn btn-primary btn-block mt-3" href="{{ route('buyer.property.messages', $property->id) }}">Contact Seller</a>
+                <a class="btn btn-primary btn-block mt-3" href="{{ route('buyer.comments', $property->id) }}">Contact Seller</a>
             </div>
         </div>
         <hr>
