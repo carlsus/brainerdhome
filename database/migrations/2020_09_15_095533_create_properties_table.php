@@ -15,7 +15,7 @@ class CreatePropertiesTable extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('type_id');
+            $table->unsignedBigInteger('property_type_id');
             $table->unsignedBigInteger('user_id');
             $table->string('title');
             $table->decimal('price', 15, 2);
@@ -31,7 +31,7 @@ class CreatePropertiesTable extends Migration
             $table->timestamps();
             // Foreign Keys
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('type_id')->references('id')->on('property_types');
+            $table->foreign('property_type_id')->references('id')->on('property_types');
         });
     }
 
