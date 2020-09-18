@@ -17,7 +17,7 @@ class Property extends Model
     // Method to link the property listing to the seller.
     public function seller()
     {
-        return $this->hasOne(User::class);
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 
     // Method to link the property listing to its type.

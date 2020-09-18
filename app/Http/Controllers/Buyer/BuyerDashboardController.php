@@ -11,7 +11,7 @@ class BuyerDashboardController extends Controller
 {
     public function index()
     {
-        $propertyListings = Property::all();
+        $propertyListings = Property::with(['seller', 'type'])->get();
         return view('buyer_views.dashboard.index', compact('propertyListings'));
     }
 }
