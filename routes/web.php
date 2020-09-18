@@ -27,7 +27,9 @@ Route::get('/buyer', 'Buyer\BuyerSearchController@index')->name('buyer.search.in
 Route::get('/buyer/register', 'Buyer\BuyerRegistrationController@show')->name('buyer.register');
 Route::post('/buyer/register', 'Buyer\BuyerRegistrationController@create')->name('buyer.register');
 Route::get('/buyer/dashboard', 'Buyer\BuyerDashboardController@index')->middleware(['auth', 'buyer'])->name('buyer.dashboard');
-
+// Buyer Comments
+Route::get('/buyer/property/{id}', 'Buyer\BuyerCommentsController@show')->middleware(['auth', 'buyer'])->name('buyer.property.comments');
+//==================================================================================================================================
 // Property
 Route::get('/property', 'PropertiesController@index')->middleware('auth')->name('properties.index');
 Route::get('/property/create', 'PropertiesController@create')->middleware('auth')->name('properties.create');
