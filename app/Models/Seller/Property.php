@@ -5,6 +5,7 @@ namespace App\Models\Seller;
 use Illuminate\Database\Eloquent\Model;
 use App\User;
 use App\Models\Seller\PropertyType;
+use App\Models\Buyer\Comment;
 
 class Property extends Model
 {
@@ -24,6 +25,11 @@ class Property extends Model
     public function type()
     {
         return $this->belongsTo(PropertyType::class);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 
     public function getFormattedPriceAttribute()

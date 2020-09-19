@@ -16,13 +16,11 @@ class CreateCommentsTable extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('property_id');
-            $table->unsignedBigInteger('seller_id');
             $table->unsignedBigInteger('buyer_id');
             $table->string('message');
             $table->boolean('read')->default(false);
             $table->timestamps();
 
-            $table->foreign('seller_id')->references('id')->on('users');
             $table->foreign('buyer_id')->references('id')->on('users');
             $table->foreign('property_id')->references('id')->on('properties');
         });

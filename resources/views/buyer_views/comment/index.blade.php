@@ -19,29 +19,19 @@
 @section('content')
 <div class="container">
     <div class="col-12">
-        <div class="card mb-3">
-            <div class="card-body">
-                <div class="card-title">{{ $property->seller->full_name }}</div>
-                <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nisi numquam soluta magni recusandae quam distinctio vel, perspiciatis omnis maiores nobis laboriosam tenetur debitis sit quas ipsum. Praesentium, vero corporis.</div>
-                <div class="float-md-right">
-                    <div class="col-sm-12">
-                        <a class="btn btn-sm btn-block btn-info mt-3" href="#">Reply</a>
+        @foreach ($property->comments as $comment)
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="card-title">{{ $comment->buyer->full_name}}</div>
+                    <div class="card-text">{{ $comment->message }}</div>
+                    <div class="float-md-right">
+                        <div class="col-sm-12">
+                            <a class="btn btn-sm btn-block btn-info mt-3" href="#">Reply</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-body">
-                <div class="card-title">{{ $property->seller->full_name }}</div>
-                <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nisi numquam soluta magni recusandae quam distinctio vel, perspiciatis omnis maiores nobis laboriosam tenetur debitis sit quas ipsum. Praesentium, vero corporis.</div>
-                <div class="float-md-right">
-                    <div class="col-sm-12">
-                        <a class="btn btn-sm btn-block btn-info mt-3" href="#">Reply</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
 </div>
 @endsection
