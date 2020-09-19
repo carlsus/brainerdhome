@@ -19,10 +19,19 @@
 @section('content')
 <div class="container">
     <div class="col-12">
-        @foreach ($property->comments as $comment)
+        @foreach ($comments as $comment)
+            @if ($comment->buyer_id === Auth::user()->id)
             <div class="card mb-3">
                 <div class="card-body">
-                    <div class="card-title">{{ $comment->buyer->full_name}}</div>
+                    <div class="card-title text-right"><strong>You</strong></div>
+                    <div class="card-text text-right">{{ $comment->message }}</div>
+                </div>
+            </div>
+            @endif
+            @if($comment->property->seller->id === $comment->buyer_id)
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="card-title"><strong>{{ $property->seller->full_name }}</strong></div>
                     <div class="card-text">{{ $comment->message }}</div>
                     <div class="float-md-right">
                         <div class="col-sm-12">
@@ -31,6 +40,7 @@
                     </div>
                 </div>
             </div>
+            @endif
         @endforeach
     </div>
 </div>
