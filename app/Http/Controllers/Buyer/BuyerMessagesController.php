@@ -13,8 +13,7 @@ class BuyerMessagesController extends Controller
     {
         // $property = Property::where('id','=',$id)
         //     ->with(['seller', 'type', 'comments'])->firstOrFail();
-        $property = Property::findOrFail($id);
-        $comments = $property->comments()->get();   
+         
         return view('buyer_views.comment.index', compact('property', 'comments'));
     }
 }

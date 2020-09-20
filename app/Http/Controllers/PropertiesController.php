@@ -18,12 +18,19 @@ class PropertiesController extends Controller
     {
         // Get the properties the user posted.
         $propertyListings = Auth::user()->property;
-        //dd($propertyListings);
         return view('property.index', compact('propertyListings'));
+    }
+
+    public function show($id)
+    {
+        $property = Property::findOrFail($id)->first();
+        //dd($property);
+        return view('property.show', compact('property'));
     }
 
     public function create()
     {
+        // Get the property type.
         $propertyTypes = PropertyType::all();
         return view('property.create', compact('propertyTypes'));
     }
