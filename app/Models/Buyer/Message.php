@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Seller\Property;
 use App\User;
 
-class Comment extends Model
+class Message extends Model
 {
     public function property()
     {

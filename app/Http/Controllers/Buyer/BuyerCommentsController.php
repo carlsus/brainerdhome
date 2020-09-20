@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Seller\Property;
 use Auth;
 
-class BuyerCommentsController extends Controller
+class BuyerMessagesController extends Controller
 {
     public function show($id)
     {
