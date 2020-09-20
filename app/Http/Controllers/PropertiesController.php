@@ -23,8 +23,8 @@ class PropertiesController extends Controller
 
     public function show($id)
     {
-        $property = Property::findOrFail($id)->first();
-        //dd($property);
+        // Find the property based on ID.
+        $property = Property::findOrFail($id);
         return view('property.show', compact('property'));
     }
 
