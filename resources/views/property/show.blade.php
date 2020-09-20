@@ -29,7 +29,7 @@
                         <div class="card-title text-center"><strong>{{ $property->seller->full_name }}</strong></div>
                         <div class="card-subtitle text-center mb-4"><span class="fas fa-envelope"></span> {{ $property->seller->email }}</div>
                         <div class="card-subtitle mb-2 text-muted">Contact Agent</div>
-                        <form action="{{ route('message.store', $property->id) }}" method="POST">
+                        <form action="{{ route('message.store', $property) }}" method="POST">
                             @csrf
                             <div class="form-group">
                                 <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message"></textarea>

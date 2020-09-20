@@ -29,7 +29,7 @@ Route::post('/buyer/register', 'Buyer\BuyerRegistrationController@create')->name
 Route::get('/buyer/dashboard', 'Buyer\BuyerDashboardController@index')->middleware(['auth', 'buyer'])->name('buyer.dashboard');
 // Buyer Messages
 Route::get('/buyer/property/{id}', 'PropertiesController@show')->middleware('auth')->name('properties.show');
-Route::post('/property/message/{id}', 'Buyer\BuyerMessagesController@store')->middleware('auth')->name('message.store');
+Route::post('/{property}/message/', 'Buyer\BuyerMessagesController@store')->middleware('auth')->name('message.store');
 //==================================================================================================================================
 // Property
 Route::get('/property', 'PropertiesController@index')->middleware('auth')->name('properties.index');
