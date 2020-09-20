@@ -7,6 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Models\Seller\Property;
 use App\Models\Buyer\Comment;
+use App\Models\Buyer\Message;
 
 class User extends Authenticatable
 {
@@ -46,9 +47,9 @@ class User extends Authenticatable
         return $this->hasMany(Property::class);
     }
 
-    public function comments()
+    public function messages()
     {
-        return $this->hasMany(Comment::class);
+        return $this->hasMany(Message::class, 'buyer_id');
     }
 
     public function getFullNameAttribute()

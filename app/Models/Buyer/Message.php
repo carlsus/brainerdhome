@@ -8,12 +8,15 @@ use App\User;
 
 class Message extends Model
 {
+
+    protected $guarded = [];
+
     public function property()
     {
         return $this->belongsTo(Property::class);
     }    
 
-    public function buyer()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }
