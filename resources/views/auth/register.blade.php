@@ -6,6 +6,7 @@
         <div class="card-body">
             <form method="POST" action="{{ route('register') }}">
                 @csrf
+                <input type="text" value="seller" name="user_type" hidden>
 
                 <div class="form-group row">
                     <label for="firstname" class="col-md-4 col-form-label text-md-right">{{ __('Firstname') }}</label>
